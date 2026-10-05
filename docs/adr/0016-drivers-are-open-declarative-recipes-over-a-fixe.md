@@ -1,0 +1,7 @@
+# Drivers are open declarative recipes over a fixed contract
+
+giro spawned agent CLIs through a closed registry of four Python subclasses (`claude`, `agy`, `codex`, `gemini`), so adding a tool like `cursor-agent` meant editing the engine and cutting a release. We instead make a **Driver** an open declarative recipe — command, prompt delivery (`stdin` | `positional-dash` | `file`), a `{model}` flag template, and an optional envelope `unwrap`/`error_when` — so any CLI a user names in chat can be driven with no code change, while the four shipped tools stay curated presets for their quirks. The openness is bounded by one fixed contract, not by a menu: a worker CLI must take the full prompt off stdin or a file (never argv — prompts run past the 128 KiB limit), run headless and exit, edit files in its cwd under a write-bypass flag granted per role in the roster (never inherited by a read-only judge or planner), and end with the strict JSON envelope as its last stdout object — the seam the whole fail-closed model parses. A mandatory smoke-test round-trip — a canned prompt, a parseable envelope back — proves an arbitrary CLI honours the contract before any Run depends on it.
+
+## Considered options
+
+A Python entry-point/plugin system was rejected: it is heavier to author, requires installing code, and cannot be defined on the fly from a chat session — the declarative TOML recipe is the whole point.

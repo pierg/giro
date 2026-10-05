@@ -1,0 +1,5 @@
+# State frontmatter is engine-only; absence defaults, activation stamps
+
+Extends [ADR-0009](0009-the-template-has-one-writer.md); upholds [ADR-0001](0001-control-never-crosses-an-llm.md) and [ADR-0006](0006-fail-closed-everywhere.md).
+
+Because a Spec or Issue can now be authored without giro ([ADR-0018](0018-authoring-skills-are-giro-independent.md)), the authoring skills write *no* lifecycle frontmatter — only bodies and generic `blocked_by` edges, never a `state:` or `attempts:` line. The store reader defaults a missing state to its initial value (`draft` for a Spec, `ready` for an Issue) and the engine stamps the real frontmatter when the Spec activates, so lifecycle state remains the engine's sole property: the "one writer" of ADR-0009 just moves one layer down — bodies and numbering into `src/giro/scaffold.py`, state into the engine. Tolerance is for *absence*, never garbage: a present-but-invalid state is still a loud error, and `giro doctor` reads every artifact the way the engine will (parse, resolvable edges, no cycle) so a malformed doc never reaches a Run.

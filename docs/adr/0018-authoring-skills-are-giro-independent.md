@@ -1,0 +1,5 @@
+# Authoring skills are giro-independent
+
+Refines [ADR-0002](0002-cli-owns-the-loop-skills-are-touchpoints.md); revises the skill-naming subclause of [ADR-0015](0015-prompts-and-skills-live-apart-cleanly.md) (skills need no longer be giro-prefixed).
+
+The documentation phase — the `grill`, `spec`, and `plan` skills — is cut loose from the giro CLI: they drop the `giro-` prefix, carry their own templates and numbering-by-inspection, and write plain Specs, ADRs, and Issues, so they install and run with no giro installed at all. This makes them CLI-*independent* touchpoints — giro is one possible downstream consumer of their artifacts, not a requirement — which deliberately reverses the earlier "every host skill is giro-prefixed" convention for these three. The trade-off is giving up a single install unit and byte-identical `giro new` scaffolding in exchange for reach: the interviewing, spec-writing, and slicing method (adapted from Matt Pocock, MIT) is usable, and adoptable, without buying the engine — and the implementation phase (`giro`, `giro-setup`, the loop) stays CLI-bound where its strict workflows live.

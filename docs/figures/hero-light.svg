@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-label="How giro works. You ask your coding agent in plain words: grill me on this idea, write a spec for retries, plan it into issues, implement it with giro, how is it going. The grill, spec and plan skills work in chat and need no engine; the giro skill dispatches a Run. In the giro engine, a deterministic loop, a fresh worker agent edits files, then the gates run: tests, where the exit code decides, and blind reviewers, fresh judges. If all are green the engine commits and the Run exits with proof on the branch giro/spec, which you merge. If not and budget is left, the findings go back to a new worker attempt. When the budget is spent the Run exits as needs-human, a question back to you in chat, such as should deletes cascade; you answer yes and the Run resumes." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo1MDkyMWQyYS1kN2VlLTQ3YzgtYmYwMi00OWQ3NzhjMTUwZjYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaOW648+cspbuWyM0mj4Vl5YAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDphZWQ0MGJkNi0wZGJlLTQyMDAtODZlMS03NzNjNzI4ZTc2MDNscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoxKU+rS8MpSQV70UoLTPO6QAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggMfKPH30rHijLGpL2aSRpuAMBkmg+QJKoIqtAYT+9HFykZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDuCPsFKSGv/us75AL0guRsAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIN6ioqFyat1BFujmJwA3y7aOA93fOYlww7nIGAndmkRBZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQOWZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjUwOTIxZDJhLWQ3ZWUtNDdjOC1iZjAyLTQ5ZDc3OGMxNTBmNi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmE1ZTcyYzViLWVjM2YtNDA5NS1hMmM4LTM3YzA4MTQzMTM4ZXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAx8o8ffSseKMsakvZpJGm4AwGSaD5Akqgiq0BhP70cXKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggY1pY+wRutVJeRt+wPRZR7mhk/5Y4Z7+IxDsqgstGZLmiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg9lX8rKT/cK6PSX+nrUl/kdxMT+3Bn/xS2uv6Faozz9Z0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQJs7z+1Scf0wJ7geMQnNbJmOT9pXYl6QDdhBob4CJisZjrE7OtU1xJFMAssYEf12T1m8eIz9ArUNPAVlTJ0IZNw=</c2pa:manifest></metadata>
+<style>
+svg{--ink:#17212a;--ink-soft:#45535d;--ink-faint:#7b8892;--rule:#ccd5db;--brass:#a06f22;--pass:#257f66;--escalate:#b5482f;--panel-2:#eef2f4;}
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.box{fill:var(--panel-2);stroke:var(--ink-soft);stroke-width:1.6}
+.box-brass{fill:var(--panel-2);stroke:var(--brass);stroke-width:1.8}
+.box-pass{fill:var(--panel-2);stroke:var(--pass);stroke-width:1.8}
+.box-esc{fill:var(--panel-2);stroke:var(--escalate);stroke-width:1.8}
+.container{fill:none;stroke:var(--brass);stroke-width:1.8}
+.gates{fill:none;stroke:var(--ink-faint);stroke-width:1.3;stroke-dasharray:4 4}
+.bubble{fill:none;stroke:var(--ink-faint);stroke-width:1.3}
+.bubble-brass{fill:none;stroke:var(--brass);stroke-width:1.6}
+.bubble-esc{fill:none;stroke:var(--escalate);stroke-width:1.6}
+.chip{fill:none;stroke:var(--ink-faint);stroke-width:1.2}
+.chip-brass{fill:none;stroke:var(--brass);stroke-width:1.6}
+.edge{fill:none;stroke:var(--ink-soft);stroke-width:1.6}
+.e-brass{fill:none;stroke:var(--brass);stroke-width:1.7}
+.e-pass{fill:none;stroke:var(--pass);stroke-width:1.7}
+.e-esc{fill:none;stroke:var(--escalate);stroke-width:1.7}
+.fill-ink{fill:var(--ink-soft)}.fill-brass{fill:var(--brass)}.fill-pass{fill:var(--pass)}.fill-esc{fill:var(--escalate)}
+.t{fill:var(--ink);font-size:14px}
+.txt{fill:var(--ink);font-size:15px;font-weight:600}
+.big{fill:var(--ink);font-size:16px;font-weight:650}
+.note{fill:var(--ink-soft);font-size:13px}
+.lab{fill:var(--ink-soft);font-size:13px;letter-spacing:.06em}
+.brass{fill:var(--brass);font-size:13px;letter-spacing:.06em;font-weight:700}
+.brass-t{fill:var(--brass);font-size:13px}
+.pass{fill:var(--pass);font-size:13px}
+.esc{fill:var(--escalate);font-size:13px}
+.chip-t{fill:var(--ink);font-size:13.5px}
+.chip-t-brass{fill:var(--brass);font-size:13.5px;font-weight:700}
+</style>
+<defs>
+<marker id="a-ink" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-ink"/></marker>
+<marker id="a-brass" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-brass"/></marker>
+<marker id="a-pass" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-pass"/></marker>
+<marker id="a-esc" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-esc"/></marker>
+</defs>
+
+<!-- ============ YOU ============ -->
+<text class="lab mono" x="16" y="30">YOU, IN PLAIN WORDS</text>
+<rect class="bubble" x="16" y="42" width="176" height="28" rx="14"/>
+<text class="t" x="30" y="61">“grill me on this idea”</text>
+<rect class="bubble" x="16" y="78" width="196" height="28" rx="14"/>
+<text class="t" x="30" y="97">“write a spec for retries”</text>
+<rect class="bubble" x="16" y="114" width="160" height="28" rx="14"/>
+<text class="t" x="30" y="133">“plan it into issues”</text>
+<rect class="bubble-brass" x="16" y="150" width="190" height="28" rx="14"/>
+<text class="t" x="30" y="169">“implement it with giro”</text>
+<rect class="bubble" x="16" y="186" width="148" height="28" rx="14"/>
+<text class="t" x="30" y="205">“how is it going?”</text>
+<path class="edge" d="M100,216 L100,237" marker-end="url(#a-ink)"/>
+
+<!-- ============ AGENT ============ -->
+<rect class="box" x="16" y="238" width="184" height="170" rx="10"/>
+<text class="lab mono" x="32" y="262">YOUR CODING AGENT</text>
+<rect class="chip" x="32" y="274" width="152" height="24" rx="5"/><text class="chip-t mono" x="108" y="291" text-anchor="middle">grill</text>
+<rect class="chip" x="32" y="304" width="152" height="24" rx="5"/><text class="chip-t mono" x="108" y="321" text-anchor="middle">spec</text>
+<rect class="chip" x="32" y="334" width="152" height="24" rx="5"/><text class="chip-t mono" x="108" y="351" text-anchor="middle">plan</text>
+<rect class="chip-brass" x="32" y="364" width="152" height="28" rx="5"/><text class="chip-t-brass mono" x="108" y="383" text-anchor="middle">giro</text>
+
+<!-- dispatch -->
+<path class="e-brass" d="M184,378 L295,378" marker-end="url(#a-brass)"/>
+<text class="brass-t" x="246" y="368" text-anchor="middle">dispatches</text>
+<text class="brass-t" x="246" y="396" text-anchor="middle">a Run</text>
+
+<!-- ============ THE ENGINE ============ -->
+<rect class="container" x="296" y="16" width="398" height="414" rx="12"/>
+<text class="brass mono" x="314" y="42">GIRO · THE ENGINE</text>
+<text class="note" x="314" y="62">a deterministic loop; no prompt talks it round</text>
+
+<rect class="box" x="405" y="78" width="220" height="56" rx="8"/>
+<text class="txt" x="515" y="101" text-anchor="middle">worker</text>
+<text class="note" x="515" y="122" text-anchor="middle">a fresh agent edits files</text>
+<path class="edge" d="M515,134 L515,161" marker-end="url(#a-ink)"/>
+
+<rect class="gates" x="350" y="162" width="330" height="88" rx="8"/>
+<text class="lab mono" x="364" y="182">GATES</text>
+<rect class="box" x="364" y="190" width="140" height="50" rx="8"/>
+<text class="txt" x="434" y="211" text-anchor="middle">tests</text>
+<text class="note" x="434" y="230" text-anchor="middle">exit code decides</text>
+<rect class="box" x="516" y="190" width="152" height="50" rx="8"/>
+<text class="txt" x="592" y="211" text-anchor="middle">blind reviewers</text>
+<text class="note" x="592" y="230" text-anchor="middle">fresh judges</text>
+<path class="edge" d="M515,250 L515,265" marker-end="url(#a-ink)"/>
+
+<polygon class="box" points="515,266 561,296 515,326 469,296"/>
+<text class="t" x="515" y="292" text-anchor="middle">all</text>
+<text class="t" x="515" y="308" text-anchor="middle">green?</text>
+<path class="edge" d="M515,326 L515,343" marker-end="url(#a-ink)"/>
+<text class="note" x="525" y="339">no</text>
+<polygon class="box" points="515,344 561,374 515,404 469,374"/>
+<text class="t" x="515" y="370" text-anchor="middle">budget</text>
+<text class="t" x="515" y="386" text-anchor="middle">left?</text>
+
+<!-- retry -->
+<path class="e-brass" d="M469,374 L326,374 L326,106 L404,106" marker-end="url(#a-brass)"/>
+<text class="brass-t" x="400" y="320" text-anchor="middle">retry with</text>
+<text class="brass-t" x="400" y="338" text-anchor="middle">the findings</text>
+<text class="note" x="560" y="420" text-anchor="middle">budgets: attempts · cycles · time</text>
+
+<!-- ============ EXITS ============ -->
+<text class="lab mono" x="716" y="232">TWO EXITS</text>
+<path class="e-pass" d="M561,296 L715,296" marker-end="url(#a-pass)"/>
+<text class="pass" x="628" y="286" text-anchor="middle">pass</text>
+<text class="pass" x="628" y="314" text-anchor="middle">giro commits</text>
+<rect class="box-pass" x="716" y="244" width="168" height="104" rx="8"/>
+<text class="big" x="730" y="270">proof</text>
+<text class="note" x="730" y="292">on branch</text>
+<text class="t mono" x="730" y="312" style="font-size:13.5px">giro/&lt;spec&gt;</text>
+<text class="pass" x="730" y="334">you merge it</text>
+
+<path class="e-esc" d="M561,374 L715,374" marker-end="url(#a-esc)"/>
+<text class="esc" x="628" y="364" text-anchor="middle">spent</text>
+<rect class="box-esc" x="716" y="358" width="168" height="76" rx="8"/>
+<text class="big mono" x="730" y="384" style="font-size:15px">needs-human</text>
+<text class="note" x="730" y="404">a question back</text>
+<text class="note" x="730" y="422">to you, in chat</text>
+
+<!-- the question comes back, you answer -->
+<path class="e-esc" d="M800,434 L800,444 L203,444" marker-end="url(#a-esc)"/>
+<rect class="bubble-esc" x="16" y="430" width="186" height="28" rx="14"/>
+<text class="t" x="30" y="449">“should deletes cascade?”</text>
+<rect class="bubble" x="60" y="466" width="70" height="28" rx="14"/>
+<text class="t" x="74" y="485">“yes”</text>
+<text class="note" x="142" y="485">you answer; the Run resumes</text>
+</svg>

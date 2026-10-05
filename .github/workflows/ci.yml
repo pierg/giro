@@ -1,0 +1,29 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    # POSIX-only: giro uses fcntl, POSIX hardlinks, and start_new_session.
+    # We deliberately do NOT test on windows-latest.
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # Track the Python versions declared in pyproject's classifiers.
+        python-version: ["3.11", "3.12", "3.13"]
+    env:
+      UV_PYTHON: ${{ matrix.python-version }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv python install ${{ matrix.python-version }}
+      - run: uv sync
+      - run: uv run ruff check .
+      - run: uv run pytest -q
+      # Wheel-bundles-skills invariant: run on every PR so the release path
+      # cannot silently drift.
+      - run: scripts/dist-check.sh

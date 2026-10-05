@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" role="img" aria-label="The implement router reads the target kind. An Issue goes to the Issue loop. A Spec is checked for child Issues: if it has them it goes straight to the Spec loop; if not, the planner runs first and then the Spec loop.">
+<style>
+svg{--ink:#dbe3e9;--ink-soft:#9aa8b1;--ink-faint:#69767f;--rule:#253039;--brass:#d4a35c;--pass:#46b491;--escalate:#e07257;--panel-2:#101820;}
+.box{fill:var(--panel-2);stroke:var(--ink-soft);stroke-width:1.6}
+.box-brass{fill:var(--panel-2);stroke:var(--brass);stroke-width:1.7}
+.box-pass{fill:var(--panel-2);stroke:var(--pass);stroke-width:1.7}
+.box-esc{fill:var(--panel-2);stroke:var(--escalate);stroke-width:1.7}
+.box-dash{fill:none;stroke:var(--ink-faint);stroke-width:1.4;stroke-dasharray:4 4}
+.container{fill:none;stroke:var(--brass);stroke-width:1.7}
+.edge{fill:none;stroke:var(--ink-soft);stroke-width:1.6}
+.e-brass{fill:none;stroke:var(--brass);stroke-width:1.7}
+.e-pass{fill:none;stroke:var(--pass);stroke-width:1.7}
+.e-esc{fill:none;stroke:var(--escalate);stroke-width:1.7}
+.fill-ink{fill:var(--ink-soft)}
+.fill-brass{fill:var(--brass)}
+.fill-pass{fill:var(--pass)}
+.fill-esc{fill:var(--escalate)}
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.txt{fill:var(--ink);font-size:14px;font-weight:550}
+.txt-sm{fill:var(--ink);font-size:12.5px;font-weight:550}
+.lab{fill:var(--ink-faint);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.lab-edge{fill:var(--ink-soft);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+.lab-brass{fill:var(--brass);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+.lab-pass{fill:var(--pass);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+.lab-esc{fill:var(--escalate);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+</style>
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-ink"/></marker><marker id="ar-brass" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-brass"/></marker><marker id="ar-pass" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-pass"/></marker><marker id="ar-esc" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-esc"/></marker></defs>
+<!-- entry -->
+        <rect class="box-brass" x="34" y="118" width="150" height="56" rx="8"/>
+        <text class="txt" x="109" y="143" text-anchor="middle" style="font-family:var(--font-mono);font-size:12px">giro implement</text>
+        <text class="lab" x="109" y="160" text-anchor="middle">target</text>
+        <!-- kind? -->
+        <polygon class="box" points="256,110 300,146 256,182 212,146"/>
+        <text class="txt-sm" x="256" y="150" text-anchor="middle">kind?</text>
+        <!-- issue loop -->
+        <rect class="box" x="392" y="52" width="188" height="56" rx="8"/>
+        <text class="txt" x="486" y="76" text-anchor="middle">Issue loop</text>
+        <text class="lab" x="486" y="94" text-anchor="middle">verifier · Verify</text>
+        <!-- has issues? -->
+        <polygon class="box" points="436,214 484,250 436,286 388,250"/>
+        <text class="txt-sm" x="436" y="246" text-anchor="middle">has</text>
+        <text class="txt-sm" x="436" y="262" text-anchor="middle">issues?</text>
+        <!-- planner -->
+        <rect class="box" x="556" y="150" width="150" height="50" rx="8"/>
+        <text class="txt-sm" x="631" y="171" text-anchor="middle">plan</text>
+        <text class="lab" x="631" y="188" text-anchor="middle">decompose</text>
+        <!-- spec loop -->
+        <rect class="box" x="712" y="222" width="176" height="56" rx="8"/>
+        <text class="txt" x="800" y="246" text-anchor="middle">Spec loop</text>
+        <text class="lab" x="800" y="264" text-anchor="middle">verifier · Validate</text>
+
+        <!-- edges -->
+        <path class="edge" d="M184,146 L208,146" marker-end="url(#ar-ink)"/>
+        <path class="edge" d="M256,110 L256,80 L388,80" marker-end="url(#ar-ink)"/>
+        <text class="lab-edge" x="300" y="72">issue</text>
+        <path class="edge" d="M256,182 L256,250 L384,250" marker-end="url(#ar-ink)"/>
+        <text class="lab-edge" x="300" y="242">spec</text>
+        <path class="edge" d="M484,250 L712,250" marker-end="url(#ar-ink)"/>
+        <text class="lab-edge" x="600" y="242" text-anchor="middle">yes · wave</text>
+        <path class="edge" d="M436,214 L436,175 L552,175" marker-end="url(#ar-ink)"/>
+        <text class="lab-edge" x="452" y="200">no</text>
+        <path class="edge" d="M706,175 L800,175 L800,218" marker-end="url(#ar-ink)"/>
+        <text class="lab-edge" x="748" y="167" text-anchor="middle">then wave</text>
+</svg>

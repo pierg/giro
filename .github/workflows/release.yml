@@ -1,0 +1,33 @@
+name: release
+
+# Publishes to PyPI via trusted publishing (OIDC) — no tokens stored anywhere.
+# One-time setup on pypi.org: Account -> Publishing -> add a pending publisher
+#   project: giro, owner: pierg, repository: giro,
+#   workflow: release.yml, environment: pypi
+# Then run this workflow by hand (Actions → release → Run workflow). Pushing a tag does not publish.
+#
+# The published version is sourced dynamically from `src/giro/__init__.py`'s
+# `__version__` (see [tool.hatch.version] in pyproject.toml). Bump that
+# literal, land it, and the tag `v<version>` is a human's hand — this
+# workflow does NOT tag for you.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      # Never publish untested: gate the release on the same checks CI runs,
+      # plus the wheel-bundles-skills invariant.
+      - run: uv sync
+      - run: uv run ruff check .
+      - run: uv run pytest -q
+      - run: scripts/dist-check.sh
+      - run: uv publish --trusted-publishing always

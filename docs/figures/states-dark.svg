@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 466" role="img" aria-label="Issue states: blocked is computed from blocked_by; ready, then in-progress when an attempt is claimed. Verify pass goes to done. On a fail with budget left the Issue returns to ready with its findings; with the budget spent, or when the worker escalates, it goes to needs-human. Re-running giro implement returns it to ready with attempts reset. A human can set wontfix from any state. Spec states: draft, then active on the first giro implement. Active runs waves and Validate. When every Issue is terminal and Validate is green it is done and you merge giro/slug. An Issue stuck in needs-human or a spent validate budget sends it to needs-human; re-running giro implement returns it to active with gap_cycles reset." xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo0MmZhZWE4My0zYjk4LTQ0NWQtOGU5NS0yYTI0MTIyY2Q0MWMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKZ0t0BA9QIFQfFNqeGLwoEAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5NWQ0MzBiYi00ZjViLTQ2MzMtYmI2Zi03MGMzY2VjZWZlNDZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNonmP8aZbRQNr29qSKQjJQdQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgguOSYS7UQcXvcrzdi6t186ws6PFjnlO7BGvxSPxhB18ikZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLOs7Cv91ATkWEwReUdTxDcAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIEIZsJcVDKr21TyNPpvgBoG/TrVVoX7dilo55M2X3RP8ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQNjZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjQyZmFlYTgzLTNiOTgtNDQ1ZC04ZTk1LTJhMjQxMjJjZDQxYy9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmExNDk1OWUwLWM0YTYtNGFlZS1hNmI1LWVkZDQ3NTBlNzc3M3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCC45JhLtRBxe9yvN2Lq3XzrCzo8WOeU7sEa/FI/GEHXyKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgguIRkHEI0asaPHGAdKssTYdb5BTAHBv57IhbiNiym1cqiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggPjHKec4BRRivFq907Pdpor5wkYtdSm4rwJUfCVh/Q7N0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFYszZHXWH7FCDzxZVolsirfvlunUdMf4XmoUGCWDpTkOVkUTD9ZtXwtUW1x5Q5mD+Af0l/lVnXs0X5mHo/BluY=</c2pa:manifest></metadata>
+<style>
+svg{--ink:#dbe3e9;--ink-soft:#9aa8b1;--ink-faint:#69767f;--rule:#253039;--brass:#d4a35c;--pass:#46b491;--escalate:#e07257;--panel-2:#101820;}
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.box{fill:var(--panel-2);stroke:var(--ink-soft);stroke-width:1.6}
+.box-pass{fill:var(--panel-2);stroke:var(--pass);stroke-width:1.7}
+.box-esc{fill:var(--panel-2);stroke:var(--escalate);stroke-width:1.7}
+.box-dash{fill:var(--panel-2);stroke:var(--ink-faint);stroke-width:1.4;stroke-dasharray:4 4}
+.edge{fill:none;stroke:var(--ink-soft);stroke-width:1.6}
+.e-human{fill:none;stroke:var(--ink-soft);stroke-width:1.5;stroke-dasharray:5 4}
+.e-brass{fill:none;stroke:var(--brass);stroke-width:1.7}
+.e-pass{fill:none;stroke:var(--pass);stroke-width:1.7}
+.e-esc{fill:none;stroke:var(--escalate);stroke-width:1.7}
+.fill-ink{fill:var(--ink-soft)}.fill-brass{fill:var(--brass)}.fill-pass{fill:var(--pass)}.fill-esc{fill:var(--escalate)}
+.txt{fill:var(--ink);font-size:15px;font-weight:600}
+.mono{font-family:ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace}
+.lab{fill:var(--ink-soft);font-size:13px;letter-spacing:.04em}
+.lane{fill:var(--brass);font-size:13px;letter-spacing:.08em;font-weight:700}
+.l-brass{fill:var(--brass);font-size:13px}
+.l-pass{fill:var(--pass);font-size:13px}
+.l-esc{fill:var(--escalate);font-size:13px}
+.note{fill:var(--ink-soft);font-size:13px}
+</style>
+<defs>
+<marker id="a-ink" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-ink"/></marker>
+<marker id="a-brass" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-brass"/></marker>
+<marker id="a-pass" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-pass"/></marker>
+<marker id="a-esc" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="9" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 Z" class="fill-esc"/></marker>
+</defs>
+
+<!-- ============ ISSUE ============ -->
+<text class="lane mono" x="16" y="30">ISSUE</text>
+<rect class="box-dash" x="16" y="48" width="96" height="44" rx="7"/>
+<text class="txt" x="64" y="75" text-anchor="middle">blocked</text>
+<text class="note" x="64" y="112" text-anchor="middle">computed</text>
+<rect class="box" x="160" y="48" width="88" height="44" rx="7"/>
+<text class="txt" x="204" y="75" text-anchor="middle">ready</text>
+<rect class="box" x="310" y="48" width="126" height="44" rx="7"/>
+<text class="txt" x="373" y="75" text-anchor="middle">in-progress</text>
+<polygon class="box" points="510,36 556,70 510,104 464,70"/>
+<text class="lab mono" x="510" y="75" text-anchor="middle">Verify</text>
+<rect class="box-pass" x="612" y="48" width="100" height="44" rx="7"/>
+<text class="txt" x="662" y="75" text-anchor="middle">done</text>
+<rect class="box-dash" x="776" y="48" width="108" height="44" rx="7"/>
+<text class="txt" x="830" y="75" text-anchor="middle">wontfix</text>
+<text class="note" x="830" y="112" text-anchor="middle">you, from any state</text>
+
+<polygon class="box" points="510,126 562,162 510,198 458,162"/>
+<text class="lab mono" x="510" y="159" text-anchor="middle">budget</text>
+<text class="lab mono" x="510" y="175" text-anchor="middle">left?</text>
+<rect class="box-esc" x="612" y="140" width="130" height="44" rx="7"/>
+<text class="txt" x="677" y="167" text-anchor="middle">needs-human</text>
+<text class="note" x="752" y="158">or the worker</text>
+<text class="note" x="752" y="175">escalates</text>
+
+<path class="edge" d="M112,70 L159,70" marker-end="url(#a-ink)"/>
+<text class="lab mono" x="136" y="62" text-anchor="middle">deps</text>
+<path class="edge" d="M248,70 L309,70" marker-end="url(#a-ink)"/>
+<text class="lab mono" x="279" y="62" text-anchor="middle">claim</text>
+<path class="edge" d="M436,70 L463,70" marker-end="url(#a-ink)"/>
+<path class="e-pass" d="M556,70 L611,70" marker-end="url(#a-pass)"/>
+<text class="l-pass mono" x="584" y="62" text-anchor="middle">pass</text>
+<path class="edge" d="M510,104 L510,125" marker-end="url(#a-ink)"/>
+<text class="lab mono" x="520" y="120">fail</text>
+<path class="e-brass" d="M458,162 L214,162 L214,93" marker-end="url(#a-brass)"/>
+<text class="l-brass mono" x="340" y="154" text-anchor="middle">yes · retry with findings</text>
+<path class="e-esc" d="M562,162 L611,162" marker-end="url(#a-esc)"/>
+<text class="l-esc mono" x="586" y="154" text-anchor="middle">no</text>
+<path class="e-human" d="M677,184 L677,226 L182,226 L182,93" marker-end="url(#a-ink)"/>
+<text class="note" x="432" y="218" text-anchor="middle">you run giro implement again · attempts reset</text>
+
+<!-- ============ SPEC ============ -->
+<text class="lane mono" x="16" y="270">SPEC</text>
+<rect class="box" x="16" y="300" width="96" height="44" rx="7"/>
+<text class="txt" x="64" y="327" text-anchor="middle">draft</text>
+<rect class="box" x="210" y="300" width="130" height="44" rx="7"/>
+<text class="txt" x="275" y="327" text-anchor="middle">active</text>
+<rect class="box-pass" x="612" y="300" width="100" height="44" rx="7"/>
+<text class="txt" x="662" y="327" text-anchor="middle">done</text>
+<text class="note" x="724" y="327">you merge giro/&lt;slug&gt;</text>
+<rect class="box-esc" x="612" y="370" width="130" height="44" rx="7"/>
+<text class="txt" x="677" y="397" text-anchor="middle">needs-human</text>
+
+<path class="edge" d="M112,322 L209,322" marker-end="url(#a-ink)"/>
+<text class="lab mono" x="160" y="314" text-anchor="middle">first run</text>
+<path class="e-brass" d="M250,300 C250,262 300,262 300,299" marker-end="url(#a-brass)"/>
+<text class="l-brass mono" x="314" y="276">waves · Validate · gap Issues</text>
+<path class="e-pass" d="M340,322 L611,322" marker-end="url(#a-pass)"/>
+<text class="l-pass mono" x="476" y="314" text-anchor="middle">Validate green</text>
+<text class="note" x="476" y="342" text-anchor="middle">every Issue terminal</text>
+<path class="e-esc" d="M300,344 L300,392 L611,392" marker-end="url(#a-esc)"/>
+<text class="l-esc mono" x="456" y="384" text-anchor="middle">Issue stuck or budget spent</text>
+<path class="e-human" d="M677,414 L677,440 L250,440 L250,345" marker-end="url(#a-ink)"/>
+<text class="note" x="464" y="458" text-anchor="middle">you run giro implement again · gap_cycles reset</text>
+</svg>

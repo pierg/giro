@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" role="img" aria-label="The Spec loop contains a wave of three Issue loops, each verified by Verify. Their results integrate onto the Spec's own branch giro/slug and are re-verified, then Validate judges the whole Spec. On pass the Spec is done and a human merges the branch. On fail, gap Issues loop back into the next wave. Budget exhaustion escalates to needs-human.">
+<style>
+svg{--ink:#17212a;--ink-soft:#45535d;--ink-faint:#7b8892;--rule:#ccd5db;--brass:#a06f22;--pass:#257f66;--escalate:#b5482f;--panel-2:#eef2f4;}
+.box{fill:var(--panel-2);stroke:var(--ink-soft);stroke-width:1.6}
+.box-brass{fill:var(--panel-2);stroke:var(--brass);stroke-width:1.7}
+.box-pass{fill:var(--panel-2);stroke:var(--pass);stroke-width:1.7}
+.box-esc{fill:var(--panel-2);stroke:var(--escalate);stroke-width:1.7}
+.box-dash{fill:none;stroke:var(--ink-faint);stroke-width:1.4;stroke-dasharray:4 4}
+.container{fill:none;stroke:var(--brass);stroke-width:1.7}
+.edge{fill:none;stroke:var(--ink-soft);stroke-width:1.6}
+.e-brass{fill:none;stroke:var(--brass);stroke-width:1.7}
+.e-pass{fill:none;stroke:var(--pass);stroke-width:1.7}
+.e-esc{fill:none;stroke:var(--escalate);stroke-width:1.7}
+.fill-ink{fill:var(--ink-soft)}
+.fill-brass{fill:var(--brass)}
+.fill-pass{fill:var(--pass)}
+.fill-esc{fill:var(--escalate)}
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.txt{fill:var(--ink);font-size:14px;font-weight:550}
+.txt-sm{fill:var(--ink);font-size:12.5px;font-weight:550}
+.lab{fill:var(--ink-faint);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.lab-edge{fill:var(--ink-soft);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+.lab-brass{fill:var(--brass);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+.lab-pass{fill:var(--pass);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+.lab-esc{fill:var(--escalate);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+</style>
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-ink"/></marker><marker id="ar-brass" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-brass"/></marker><marker id="ar-pass" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-pass"/></marker><marker id="ar-esc" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-esc"/></marker></defs>
+<!-- container -->
+        <rect class="container" x="40" y="46" width="820" height="306" rx="14"/>
+        <text class="lab-brass" x="64" y="76">Spec loop</text>
+
+        <!-- wave band -->
+        <rect class="box-dash" x="72" y="96" width="372" height="196" rx="10"/>
+        <text class="lab" x="90" y="120">Wave · ready Issues</text>
+        <!-- three issue loops -->
+        <rect class="box" x="92" y="132" width="332" height="42" rx="7"/>
+        <text class="txt-sm" x="108" y="158">Issue loop</text>
+        <text class="lab" x="408" y="158" text-anchor="end">verify</text>
+        <rect class="box" x="92" y="184" width="332" height="42" rx="7"/>
+        <text class="txt-sm" x="108" y="210">Issue loop</text>
+        <text class="lab" x="408" y="210" text-anchor="end">verify</text>
+        <rect class="box" x="92" y="236" width="332" height="42" rx="7"/>
+        <text class="txt-sm" x="108" y="262">Issue loop</text>
+        <text class="lab" x="408" y="262" text-anchor="end">verify</text>
+
+        <!-- integrate -->
+        <rect class="box" x="492" y="150" width="164" height="60" rx="8"/>
+        <text class="txt-sm" x="574" y="174" text-anchor="middle">Integrate</text>
+        <text class="lab" x="574" y="192" text-anchor="middle">branch · re-verify</text>
+        <!-- validate -->
+        <rect class="box-brass" x="696" y="150" width="140" height="60" rx="8"/>
+        <text class="txt" x="766" y="174" text-anchor="middle">Validate</text>
+        <text class="lab" x="766" y="192" text-anchor="middle">right thing?</text>
+        <!-- spec done -->
+        <rect class="box-pass" x="696" y="286" width="140" height="46" rx="8"/>
+        <text class="txt-sm" x="766" y="309" text-anchor="middle">Spec done</text>
+        <text class="lab-pass" x="766" y="325" text-anchor="middle">proof</text>
+
+        <!-- edges: wave -> integrate -> validate -->
+        <path class="edge" d="M444,180 L488,180" marker-end="url(#ar-ink)"/>
+        <path class="edge" d="M656,180 L692,180" marker-end="url(#ar-ink)"/>
+        <!-- validate pass -> done -->
+        <path class="e-pass" d="M766,210 L766,282" marker-end="url(#ar-pass)"/>
+        <text class="lab-pass" x="780" y="252">pass</text>
+        <!-- feedback: validate fail -> wave (top arc, above band) -->
+        <path class="e-brass" d="M740,150 L740,84 L258,84 L258,128" marker-end="url(#ar-brass)"/>
+        <text class="lab-brass" x="492" y="78" text-anchor="middle">fail · gap Issues → next wave</text>
+
+        <!-- human merge, leaving the container at the bottom -->
+        <path class="e-pass" d="M766,332 L766,362" marker-end="url(#ar-pass)"/>
+        <text class="lab" x="766" y="381" text-anchor="middle">human merges giro/&lt;slug&gt;</text>
+</svg>

@@ -1,0 +1,26 @@
+# giro's own dogfood configuration — the engine builds giro with giro.
+
+[verify]
+gates = [
+  { name = "check", type = "command", run = "uv run ruff check . && uv run pytest -q" },
+  { name = "review", type = "judge", criterion = "review" },
+  { name = "conformance", type = "judge", criterion = "conformance" },
+]
+
+[validate]
+gates = [
+  { name = "spec-fit", type = "judge", rubric = "Every acceptance criterion in the Spec is demonstrably met by the integrated changes, with tests covering them." },
+]
+
+[runner]
+concurrency = 1
+
+# [runner.roster] unset: the starter roster applies. Set your own drivers and models here.
+
+[github_projection]  # one-way projection of Runs onto GitHub issues (ADR-0014)
+enabled = false      # set true in a clone where `gh` is logged in and you want the issues
+
+[budget]
+issue_attempts = 3
+validate_cycles = 1
+gate_timeout = 600

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" role="img" aria-label="The guarded loop: actor makes an attempt, verifier gates judge it; if all pass the loop exits with proof, if it fails and budget remains the findings feed back to the actor, and if budget is spent the loop escalates to needs-human.">
+<style>
+svg{--ink:#17212a;--ink-soft:#45535d;--ink-faint:#7b8892;--rule:#ccd5db;--brass:#a06f22;--pass:#257f66;--escalate:#b5482f;--panel-2:#eef2f4;}
+.box{fill:var(--panel-2);stroke:var(--ink-soft);stroke-width:1.6}
+.box-brass{fill:var(--panel-2);stroke:var(--brass);stroke-width:1.7}
+.box-pass{fill:var(--panel-2);stroke:var(--pass);stroke-width:1.7}
+.box-esc{fill:var(--panel-2);stroke:var(--escalate);stroke-width:1.7}
+.box-dash{fill:none;stroke:var(--ink-faint);stroke-width:1.4;stroke-dasharray:4 4}
+.container{fill:none;stroke:var(--brass);stroke-width:1.7}
+.edge{fill:none;stroke:var(--ink-soft);stroke-width:1.6}
+.e-brass{fill:none;stroke:var(--brass);stroke-width:1.7}
+.e-pass{fill:none;stroke:var(--pass);stroke-width:1.7}
+.e-esc{fill:none;stroke:var(--escalate);stroke-width:1.7}
+.fill-ink{fill:var(--ink-soft)}
+.fill-brass{fill:var(--brass)}
+.fill-pass{fill:var(--pass)}
+.fill-esc{fill:var(--escalate)}
+text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+.txt{fill:var(--ink);font-size:14px;font-weight:550}
+.txt-sm{fill:var(--ink);font-size:12.5px;font-weight:550}
+.lab{fill:var(--ink-faint);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+.lab-edge{fill:var(--ink-soft);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+.lab-brass{fill:var(--brass);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}
+.lab-pass{fill:var(--pass);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+.lab-esc{fill:var(--escalate);font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:10.5px;letter-spacing:.04em}
+</style>
+<defs><marker id="ar-ink" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-ink"/></marker><marker id="ar-brass" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-brass"/></marker><marker id="ar-pass" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-pass"/></marker><marker id="ar-esc" markerWidth="10" markerHeight="10" refX="7.5" refY="3.4" orient="auto"><path d="M0,0 L7.5,3.4 L0,6.8 Z" class="fill-esc"/></marker></defs>
+<!-- actor -->
+        <rect class="box" x="48" y="62" width="176" height="58" rx="8"/>
+        <text class="txt" x="136" y="86" text-anchor="middle">Actor</text>
+        <text class="lab" x="136" y="104" text-anchor="middle">makes an attempt</text>
+        <!-- verifier -->
+        <rect class="box-brass" x="300" y="62" width="230" height="58" rx="8"/>
+        <text class="txt" x="415" y="86" text-anchor="middle">Verifier</text>
+        <text class="lab" x="415" y="104" text-anchor="middle">gates · pass / fail</text>
+        <!-- decision 1: all green -->
+        <polygon class="box" points="626,53 682,91 626,129 570,91"/>
+        <text class="txt-sm" x="626" y="87" text-anchor="middle">all</text>
+        <text class="txt-sm" x="626" y="103" text-anchor="middle">green?</text>
+        <!-- exit -->
+        <rect class="box-pass" x="738" y="62" width="130" height="58" rx="8"/>
+        <text class="txt" x="803" y="86" text-anchor="middle">Exit</text>
+        <text class="lab-pass" x="803" y="104" text-anchor="middle">proof</text>
+        <!-- decision 2: budget -->
+        <polygon class="box" points="626,178 680,214 626,250 572,214"/>
+        <text class="txt-sm" x="626" y="210" text-anchor="middle">budget</text>
+        <text class="txt-sm" x="626" y="226" text-anchor="middle">left?</text>
+        <!-- escalate -->
+        <rect class="box-esc" x="738" y="185" width="130" height="58" rx="8"/>
+        <text class="txt-sm" x="803" y="209" text-anchor="middle">Escalate</text>
+        <text class="lab-esc" x="803" y="227" text-anchor="middle">needs-human</text>
+
+        <!-- edges -->
+        <path class="edge" d="M224,91 L296,91" marker-end="url(#ar-ink)"/>
+        <text class="lab-edge" x="260" y="83" text-anchor="middle">attempt</text>
+        <path class="edge" d="M530,91 L566,91" marker-end="url(#ar-ink)"/>
+        <path class="e-pass" d="M682,91 L734,91" marker-end="url(#ar-pass)"/>
+        <text class="lab-pass" x="708" y="83" text-anchor="middle">pass</text>
+        <path class="edge" d="M626,129 L626,174" marker-end="url(#ar-ink)"/>
+        <text class="lab-edge" x="640" y="156">fail</text>
+        <path class="e-esc" d="M680,214 L734,214" marker-end="url(#ar-esc)"/>
+        <text class="lab-esc" x="707" y="206" text-anchor="middle">spent</text>
+        <!-- loop back -->
+        <path class="e-brass" d="M572,214 L136,214 L136,124" marker-end="url(#ar-brass)"/>
+        <text class="lab-brass" x="330" y="206" text-anchor="middle">retry · findings feed back</text>
+</svg>

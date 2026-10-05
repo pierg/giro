@@ -1,0 +1,112 @@
+[project]
+name = "giro"
+# Single source of truth is `src/giro/__init__.py`'s `__version__` — hatch reads
+# it dynamically (see [tool.hatch.version] below), and Python code imports the
+# same literal via `from giro import __version__`. Nothing to keep in sync.
+dynamic = ["version", "readme"]
+description = "A deterministic loop around your coding agent: your tests and blind reviewers decide, and every run ends in proof on a branch or a question for you."
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Piergiuseppe Mallozzi" }]
+keywords = ["agents", "ai", "automation", "verification", "tdd", "loops"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  # SPDX License-Expression above supersedes the deprecated
+  # "License :: OSI Approved :: MIT License" classifier (PEP 639).
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development",
+]
+# Runtime system dependencies (not Python packages, so not listed here):
+#   - git (always required)
+#   - a supported agent CLI: `claude`, `agy`, `codex`, or `gemini`
+#   - `gh` — ONLY when `[github_projection]` is enabled in `giro.toml`
+#     (the projection is experimental in 0.1.0).
+
+[project.scripts]
+giro = "giro.cli:main"
+
+[project.urls]
+Repository    = "https://github.com/pierg/giro"
+Documentation = "https://github.com/pierg/giro#readme"
+Issues        = "https://github.com/pierg/giro/issues"
+Changelog     = "https://github.com/pierg/giro/blob/main/CHANGELOG.md"
+
+[build-system]
+requires = ["hatchling", "hatch-fancy-pypi-readme"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/giro/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/giro"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"skills" = "giro/_skills"    # host skills: giro doorway + giro-setup + standalone spec/plan/grill
+"prompts" = "giro/_prompts"  # engine-injected prompts: worker, planner, review, conformance
+
+[tool.hatch.build.targets.sdist]
+# Ship the source a user would compile from, and the docs they'd read — nothing
+# more. Dogfood specs, the local .claude cache, CI config, tests, and lock/env
+# files are noise (or a leak risk) in an sdist unpack.
+include = [
+  "src/",
+  "skills/",
+  "prompts/",
+  "docs/adr/",
+  "docs/notes/",
+  "docs/figures/",
+  "README.md",
+  "docs/design.md",
+  "docs/guide.md",
+  "docs/roadmap.md",
+  "CONTEXT.md",
+  "CHANGELOG.md",
+  "LICENSE",
+  "pyproject.toml",
+  "giro.toml",
+]
+exclude = [
+  ".claude/",
+  ".github/",
+  "tests/",
+  "uv.lock",
+  "docs/specs/",
+  ".env",
+  ".env.*",
+  "CLAUDE.md",
+  ".pytest_cache/",
+  ".ruff_cache/",
+  ".venv/",
+  "dist/",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.metadata.hooks.fancy-pypi-readme]
+content-type = "text/markdown"
+
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.fragments]]
+path = "README.md"
+
+# PyPI shows the README outside the repository, so relative image paths point at GitHub there.
+[[tool.hatch.metadata.hooks.fancy-pypi-readme.substitutions]]
+pattern = '(src|srcset)="(?!https?:)([^"]+)"'
+replacement = '\1="https://raw.githubusercontent.com/pierg/giro/main/\2"'
