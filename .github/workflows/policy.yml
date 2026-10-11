@@ -13,9 +13,12 @@ jobs:
   policy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+      - name: fetch the pull request head
+        if: github.event_name == 'pull_request'
+        run: git fetch -q origin "+refs/pull/${{ github.event.pull_request.number }}/head"
       - name: check
         env:
           P_TEXT: ${{ vars.POLICY_TEXT }}
