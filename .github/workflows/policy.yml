@@ -1,0 +1,56 @@
+name: policy
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: check
+        env:
+          P_TEXT: ${{ vars.POLICY_TEXT }}
+          P_IDENT: ${{ vars.POLICY_IDENT }}
+          P_BRANCH: ${{ vars.POLICY_BRANCH }}
+          HEAD_REF: ${{ github.head_ref }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+          PR_USER: ${{ github.event.pull_request.user.login }}
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          fail=0
+          bad() { echo "::error::$1"; fail=1; }
+          if [ -z "$P_TEXT" ] || [ -z "$P_IDENT" ] || [ -z "$P_BRANCH" ]; then
+            bad "repository variables POLICY_TEXT, POLICY_IDENT, POLICY_BRANCH are not set"; exit 1
+          fi
+          if [ -n "$HEAD_REF" ] && printf '%s\n' "$HEAD_REF" | grep -qiE "$P_BRANCH"; then
+            bad "branch name: rename the branch after the Linear issue"
+          fi
+          case "$PR_USER" in *"[bot]") bad "pull request opened by a bot account";; esac
+          if printf '%s\n%s\n' "$PR_TITLE" "$PR_BODY" | grep -qiE "$P_TEXT"; then
+            bad "pull request title or description carries a tool footer"
+          fi
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
+            commits=$(git rev-list -1 "$HEAD")
+          else
+            commits=$(git rev-list "$BASE..$HEAD")
+          fi
+          for c in $commits; do
+            if git log -1 --format='%an <%ae>%n%cn <%ce>' "$c" | grep -qiE "$P_IDENT"; then
+              bad "commit ${c:0:9}: author or committer is not the owner"
+            fi
+            if git log -1 --format=%B "$c" | grep -qiE "$P_TEXT"; then
+              bad "commit ${c:0:9}: message carries a tool trailer or footer"
+            fi
+          done
+          exit $fail
