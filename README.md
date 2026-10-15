@@ -1,5 +1,7 @@
 # giro
 
+[![PyPI](https://img.shields.io/pypi/v/giro)](https://pypi.org/project/giro/) [![CI](https://github.com/pierg/giro/actions/workflows/ci.yml/badge.svg)](https://github.com/pierg/giro/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+
 **Control never crosses an LLM. Content always does.**
 
 Most agent tooling tells a coding agent what to do and hopes it complies. giro inverts that. A deterministic loop owns every decision: it hands your coding agent one slice of a spec, runs your tests and blind reviewers on the result, feeds their findings back, and ends one of two ways: proof on a branch for you to merge, or a question for you. Never a silent "done". A budget enforced by a `while` loop cannot be talked out of; an instruction can.
@@ -96,6 +98,8 @@ giro is built with giro. Four of the Specs under [`docs/specs/`](https://github.
 
 The `grill`, `spec` and `plan` skills, and the review gate's prompt, adapt Matt Pocock's [Skills for Real Engineers](https://github.com/mattpocock/skills) (MIT): the interviewing, spec-writing, slicing and review judgment is his; the loop around them is giro's. The notice is in [LICENSE](LICENSE).
 
----
+## Related
 
-Part of a set: [folio](https://github.com/pierg/folio) · [lab-kit](https://github.com/pierg/lab-kit) · [giro](https://github.com/pierg/giro)
+folio, giro and lab-kit are three kits for working with coding agents: [folio](https://github.com/pierg/folio) for agent-maintained knowledge, [giro](https://github.com/pierg/giro) for implementation with guarantees, and [lab-kit](https://github.com/pierg/lab-kit) for rigorous automated research on top of folio.
+
+Made by [Pier Mallozzi](https://pierg.dev).
