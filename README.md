@@ -100,6 +100,6 @@ The `grill`, `spec` and `plan` skills, and the review gate's prompt, adapt Matt 
 
 ## Related
 
-folio, giro and lab-kit are three kits for working with coding agents: [folio](https://github.com/pierg/folio) for agent-maintained knowledge, [giro](https://github.com/pierg/giro) for implementation with guarantees, and [lab-kit](https://github.com/pierg/lab-kit) for rigorous automated research on top of folio.
+folio, giro and lab-kit are three kits for working with coding agents: [folio](https://github.com/pierg/folio) keeps the documents, [giro](https://github.com/pierg/giro) takes a spec to proof on a branch, and [lab-kit](https://github.com/pierg/lab-kit) runs research on top of folio.
 
 Made by [Pier Mallozzi](https://pierg.dev).
