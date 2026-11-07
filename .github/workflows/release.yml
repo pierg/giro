@@ -8,8 +8,8 @@ name: release
 #
 # The published version is sourced dynamically from `src/giro/__init__.py`'s
 # `__version__` (see [tool.hatch.version] in pyproject.toml). Bump that
-# literal, land it, and the tag `v<version>` is a human's hand — this
-# workflow does NOT tag for you.
+# literal, land it, and run this workflow: after publishing it pushes the tag
+# `v<version>` and a GitHub release with that version's changelog section.
 
 on:
   workflow_dispatch:
@@ -20,7 +20,7 @@ jobs:
     environment: pypi
     permissions:
       id-token: write
-      contents: read
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
@@ -31,3 +31,13 @@ jobs:
       - run: uv run pytest -q
       - run: scripts/dist-check.sh
       - run: uv publish --trusted-publishing always
+      # The tag and the GitHub release follow what was published, with the changelog's section.
+      - name: Tag and GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NAME: giro
+        run: |
+          v=$(ls dist/*.whl | head -1 | sed -E 's|^dist/[^-]+-([^-]+)-.*|\1|')
+          awk -v v="$v" '/^## /{ if (on) exit; if ($2 == v || $2 == "v" v) { on = 1; next } } on' CHANGELOG.md > notes.md
+          [ -s notes.md ] || echo "See CHANGELOG.md." > notes.md
+          gh release create "v$v" --target "$GITHUB_SHA" --title "$NAME $v" --notes-file notes.md
