@@ -24,6 +24,8 @@ jobs:
           P_TEXT: ${{ vars.POLICY_TEXT }}
           P_IDENT: ${{ vars.POLICY_IDENT }}
           P_BRANCH: ${{ vars.POLICY_BRANCH }}
+          P_PRIVATE: ${{ vars.POLICY_PRIVATE }}
+          PUBLIC: ${{ github.event.repository.visibility == 'public' }}
           HEAD_REF: ${{ github.head_ref }}
           PR_TITLE: ${{ github.event.pull_request.title }}
           PR_BODY: ${{ github.event.pull_request.body }}
@@ -37,11 +39,20 @@ jobs:
             bad "repository variables POLICY_TEXT, POLICY_IDENT, POLICY_BRANCH are not set"; exit 1
           fi
           if [ -n "$HEAD_REF" ] && printf '%s\n' "$HEAD_REF" | grep -qiE "$P_BRANCH"; then
-            bad "branch name: rename the branch after the Linear issue"
+            bad "branch name: rename the branch after the task"
           fi
           case "$PR_USER" in *"[bot]") bad "pull request opened by a bot account";; esac
           if printf '%s\n%s\n' "$PR_TITLE" "$PR_BODY" | grep -qiE "$P_TEXT"; then
             bad "pull request title or description carries a tool footer"
+          fi
+          # A public repo carries no tracker id or link (decision 0030).
+          if [ "$PUBLIC" = true ] && [ -n "$P_PRIVATE" ]; then
+            if printf '%s\n' "$HEAD_REF" | grep -qiE "$P_PRIVATE"; then
+              bad "branch name: a public repo's branch names the task, without a tracker id"
+            fi
+            if printf '%s\n%s\n' "$PR_TITLE" "$PR_BODY" | grep -qiE "$P_PRIVATE"; then
+              bad "pull request title or description names a tracker issue: say what changed instead"
+            fi
           fi
           if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
             commits=$(git rev-list -1 "$HEAD")
@@ -54,6 +65,17 @@ jobs:
             fi
             if git log -1 --format=%B "$c" | grep -qiE "$P_TEXT"; then
               bad "commit ${c:0:9}: message carries a tool trailer or footer"
+            fi
+            if [ "$PUBLIC" = true ]; then
+              if [ -n "$P_PRIVATE" ] && git log -1 --format=%B "$c" | grep -qiE "$P_PRIVATE"; then
+                bad "commit ${c:0:9}: message names a tracker issue"
+              fi
+              if git log -1 --format='%ae%n%ce' "$c" | grep -qviE '@users\.noreply\.github\.com$|^noreply@github\.com$'; then
+                bad "commit ${c:0:9}: author or committer email is not a GitHub noreply address"
+              fi
+            fi
+            if git diff-tree --no-commit-id --root --name-only -r "$c" | grep -qE '(^|/)(\.venv|venv|node_modules|__pycache__)/'; then
+              bad "commit ${c:0:9}: adds a virtualenv, node_modules or __pycache__; ignore it in .gitignore"
             fi
           done
           exit $fail
