@@ -1,10 +1,14 @@
 name: policy
 
+# Runs on pull requests only: a push straight to main is checked by the pre-push hook on the
+# machine that pushes (setup-machine), so GitHub spends no minutes on it (decision 0033).
 on:
   pull_request:
     types: [opened, edited, synchronize, reopened]
-  push:
-    branches: [main]
+
+concurrency:
+  group: policy-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
