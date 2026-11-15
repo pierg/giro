@@ -25,7 +25,7 @@ That is what `.github/workflows/ci.yml` runs.
 
 ## Content and gate
 
-**Gate:** `uv run pytest -q` and `uv run ruff check .`.
+**Gate:** `uv run pytest -q`, `uv run ruff check .` and `scripts/dist-check.sh`.
 
 <!-- ops:lanes:start (generated from the owner's central rules; change them there, not here) -->
 ## How changes reach main
