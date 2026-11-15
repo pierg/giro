@@ -387,7 +387,9 @@ class Ledger:
 
     def _write(self, data: dict[str, Any]) -> None:
         assert self.dir is not None
-        tmp = self.dir / f"{RUN_FILE}.tmp"
+        # Each writer its own temporary file: the dispatcher and the detached Run both write
+        # the record, and a shared name let one writer's replace take the other's file away.
+        tmp = self.dir / f"{RUN_FILE}.{os.getpid()}.{threading.get_ident()}.tmp"
         tmp.write_text(json.dumps(data, indent=2), encoding="utf-8")
         os.replace(tmp, self.dir / RUN_FILE)  # a reader never sees half a record
 
